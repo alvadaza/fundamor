@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundacion_da_Amor</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika&family=Comforter+Brush&family=Cormorant+Garamond:wght@300;500&family=Fontdiner+Swanky&family=IBM+Plex+Sans:wght@400;500;700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:wght@300;400;700&family=Roboto+Serif:wght@900&family=Roboto:wght@500&family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <>
+    <nav id="navbar">
+      <img
+        src="/imagenes/fundacion-removebg-preview.png"
+        class="logo"
+        alt="logo"
+      />
+
+      <ul id="sidemenu">
+        <li><a href="#header" onclick="closemenu()">Inicio</a></li>
+        <li><a href="#content-section" onclick="closemenu()">Servicios Educativos</a></li>
+        <li><a href="#sport" onclick="closemenu()">Programas Deportivos</a></li>
+        <li><a href="#portafolio" onclick="closemenu()">Portafolio</a></li>
+        <li><a href="#contact" onclick="closemenu()">Contacto</a></li>
+        <i class="fa-solid fa fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <header class="dual-section" id="header">
+      <div class="text-section">
+        <h1>
+          Fundamor: <br />
+          Fundación da Amor
+        </h1>
+        <p>
+          Desde el corazón, transformamos vidas a través de servicios
+          educativos, deportivos y comunitarios.
+        </p>
+        <div class="button-container">
+          <a href="#link1" class="btn btn-1">Conócenos</a>
+          <a href="#link2" class="btn btn-2">Cómo Apoyar</a>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="/imagenes/fundacion-removebg-preview.png" alt="logo" />
+      </div>
+    </header>
+
+    <section class="content-section" id="content-section">
+      <h1 class="section-title">Servicios Educativos</h1>
+      <div class="paragraph-container">
+          <div class="paragraph-box">
+            <h2>Programas <br>Académicos</h2>
+              <p>Ofrecemos una educación integral que prepara a los estudiantes para el éxito.</p>
+          </div>
+          <div class="paragraph-box">
+            <h2>Desarrollo <br>Personal</h2>
+              <p>Fomentamos habilidades blandas como liderazgo, comunicación y resolución de problemas.</p>
+          </div>
+          <div class="paragraph-box">
+            <h2>Apoyo <br>Individualizado</h2>
+              <p>Brindamos tutoría y acompañamiento personalizado para garantizar el progreso de cada estudiante.</p>
+          </div>
+      </div>
+      <section class="container-sport" id="sport">
+        <div class="image-section-sport">
+            <img src="/imagenes/1000_F_267210225_XP3HiFHTogny7udBv33lVPKJwVqiuDkH.avif" alt="Deportes" />
+        </div>
+        <div class="text-section-sport">
+            <h2>Programas Deportivos</h2>
+            <div class="program">
+                <div class="number"><span></span>1</div>
+                <div class="details">
+                    <h3>Fútbol</h3>
+                    <p>Nuestros equipos de fútbol desarrollan habilidades y disciplina a través del deporte.</p>
+                </div>
+            </div>
+            <div class="program">
+                <div class="number"><span></span>2</div>
+                <div class="details">
+                    <h3>Baloncesto</h3>
+                    <p>El baloncesto fomenta el trabajo en equipo y el espíritu competitivo.</p>
+                </div>
+            </div>
+            <div class="program">
+                <div class="number"><span></span>3</div>
+                <div class="details">
+                    <h3>Voleibol</h3>
+                    <p>El voleibol enseña a los jóvenes coordinación, agilidad y estrategia.</p>
+                </div>
+            </div>
+        </div>
+    </>
+  </body>
+
+  <script src="/script.js"></script>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemeu.style.right = "0";
+    }
+
+    function closemenu() {
+      sidemeu.style.right = "-200px";
+    }
+  </script>
+</html>
