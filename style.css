@@ -229,9 +229,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #ffffff, #fff7e0, #e5ebd9);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   width: 100%;
   height: 100%;
 }
@@ -316,6 +314,131 @@ header {
   color: var(--main-bg-color);
   text-align: left;
   margin-top: 5px;
+}
+
+.contact-rigth {
+  position: relative;
+  width: calc(100% + 190%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  gap: 80px;
+  background: linear-gradient(to bottom, #ffffff, #fff7e0, #e5ebd9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-rigth-img {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-rigth-img img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contactForm button {
+  padding: 10px;
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: var(--primary-color);
+  border: 2px solid #ccc;
+  color: var(--main-bg-color);
+}
+
+.comedores-comunitarios {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 20px;
+  position: relative;
+  width: calc(100% + 190%);
+  margin-top: 100px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comedores-texto {
+  width: 70%;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.comedores-texto h2 {
+  font-size: 2.5rem;
+  color: var(--main-bg-color);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.comedores-item {
+  background-color: #ddeee6; /* Color de fondo de los ítems */
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comedores-item h3 {
+  font-size: 1.5rem;
+  color: var(--main-bg-color);
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #ddeee6;
+}
+
+.comedores-item p {
+  font-size: 1rem;
+  color: var(--main-bg-color);
+  text-align: left;
+  background-color: #ddeee6;
+}
+
+.comedores-imagen {
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center;
+  max-width: 70%;
+  margin-left: 30px;
+  height: auto;
+  display: flex;
+  background-image: linear-gradient(to bottom, #e9e7e9 0%, #474747 100%);
+  box-shadow: 4 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comedores-imagen img {
+  max-width: 60%;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 680px) {
@@ -543,5 +666,38 @@ header {
   }
   .text-section-sport h2 {
     font-size: 2rem;
+  }
+  .contact-rigth {
+    flex-direction: column;
+    height: auto; /* Permite que el formulario crezca con el contenido */
+    width: 100%; /* El contenedor ocupa el 100% del ancho */
+  }
+
+  .contact-rigth-img {
+    display: none;
+  }
+
+  #contactForm {
+    width: 100%;
+    height: auto; /* Permite que el formulario crezca con el contenido */
+  }
+
+  .comedores-comunitarios {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, las secciones se apilan verticalmente */
+    width: 100%;
+  }
+  .comedores-texto {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .comedores-texto h2 {
+    font-size: 2rem;
+    text-align: center;
+    flex: 2;
+    margin-top: 10px;
+  }
+  .comedores-imagen {
+    max-width: 100%;
+    flex: 1;
   }
 }

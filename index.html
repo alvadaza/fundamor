@@ -30,7 +30,7 @@
         <li><a href="#header" onclick="closemenu()">Inicio</a></li>
         <li><a href="#content-section" onclick="closemenu()">Servicios Educativos</a></li>
         <li><a href="#sport" onclick="closemenu()">Programas Deportivos</a></li>
-        <li><a href="#portafolio" onclick="closemenu()">Portafolio</a></li>
+        <li><a href="#comedor" onclick="closemenu()">Comedores Comunitarios</a></li>
         <li><a href="#contact" onclick="closemenu()">Contacto</a></li>
         <i class="fa-solid fa fa-times" onclick="closemenu()"></i>
       </ul>
@@ -99,8 +99,47 @@
                     <p>El voleibol enseña a los jóvenes coordinación, agilidad y estrategia.</p>
                 </div>
             </div>
+          </div>
         </div>
-    </>
+     </seccion>
+     <section class="contact-rigth">   
+      <!--<form action="correo.php" method="post">-->
+        <form id="contactForm">    
+          <input type="text" id="name" placeholder="Tu nombre" required/>
+          <input type="email" id="email" placeholder="Tu correo electronico" required/>
+          <input type="tel" id="phone" placeholder="Tu Telefono" required/>
+          <textarea id="message" rows="6" placeholder="Tu mensaje"></textarea>
+          <button type="submit" class="btn btn2">Quiero Más Informacion del Club</button>
+        </form>
+        <div class="contact-rigth-img">
+          <img src="/imagenes/Designer.jpeg" alt="">
+        </div>
+     </section>
+
+    <div class="section comedores-comunitarios" id="comedor">
+      <div class="comedores-imagen">
+        <img src="/imagenes/comedor.png" alt="Comedores Comunitarios">
+      </div>
+      <div class="comedores-texto">
+        <h2>Comedores Comunitarios</h2>
+        <div class="comedores-item">
+          <h3>Nutrición Saludable</h3>
+          <p>Brindamos comidas nutritivas a familias en situación de vulnerabilidad.</p>
+        </div>
+        <div class="comedores-item">
+          <h3>Educación Alimentaria</h3>
+          <p>Enseñamos a las comunidades sobre hábitos alimenticios saludables.</p>
+        </div>
+        <div class="comedores-item">
+          <h3>Generación de Ingresos</h3>
+          <p>Capacitamos a los beneficiarios en habilidades culinarias para generar ingresos.</p>
+        </div>
+        <div class="comedores-item">
+          <h3>Fortalecimiento Comunitario</h3>
+          <p>Los comedores fomentan la unión y el apoyo mutuo en las comunidades.</p>
+        </div>
+      </div>
+    </div>  
   </body>
 
   <script src="/script.js"></script>
