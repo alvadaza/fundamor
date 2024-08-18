@@ -271,6 +271,18 @@
       </div>
     </section>
 
+    <div id="scroll-indicator">
+      <div class="circle">
+          <svg width="50" height="50" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="#ddd" stroke-width="10" fill="none"/>
+              <circle cx="50" cy="50" r="45" stroke="#4caf50" stroke-width="10" fill="none" stroke-dasharray="283" stroke-dashoffset="283" id="progress"/>
+          </svg>
+          <div class="icon">
+              <a href="#top">&#x2191;</a> <!-- Flecha hacia arriba -->
+          </div>
+      </div>
+  </div>
+
     <footer id="main-footer">
       <div id="footer-bottom">
           <div id="footer-info">
@@ -285,9 +297,31 @@
         <!-- .container -->
       </div>
     </footer>
-  </body>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const progress = document.getElementById('progress');
+    const topButton = document.querySelector('.icon a');
 
-  <script src="/script.js"></script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / windowHeight) * 100;
+
+        const circleProgress = 283 - (scrollPercent / 100) * 283;
+        progress.style.strokeDashoffset = circleProgress;
+    });
+
+    topButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+    </script>
+      <script src="/script.js"></script>
+  </body>
+  
+
   <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -311,5 +345,7 @@
     function closemenu() {
       sidemeu.style.right = "-200px";
     }
+
+    
   </script>
 </html>
