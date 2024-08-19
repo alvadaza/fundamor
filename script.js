@@ -1,6 +1,6 @@
 document.getElementById("whatsappIcon").addEventListener("click", function () {
   const predefinedMessage = "Quiero mas información.";
-  const whatsappURL = `https://wa.me/3133574711?text=${encodeURIComponent(
+  const whatsappURL = `https://wa.me/3134202705?text=${encodeURIComponent(
     predefinedMessage
   )}`;
   window.open(whatsappURL, "_blank");
