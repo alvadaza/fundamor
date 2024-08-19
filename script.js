@@ -111,3 +111,36 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(workElement);
   });
 });
+
+let currentIndex = 0;
+
+function showImage(index) {
+  const images = document.querySelectorAll(".carousel img");
+  const totalImages = images.length;
+
+  if (index >= totalImages) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = totalImages - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  images.forEach((img, i) => {
+    img.classList.remove("active");
+    if (i === currentIndex) {
+      img.classList.add("active");
+    }
+  });
+}
+
+function nextImage() {
+  showImage(currentIndex + 1);
+}
+
+function prevImage() {
+  showImage(currentIndex - 1);
+}
+
+// Mostrar la primera imagen al cargar la página
+showImage(currentIndex);

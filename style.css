@@ -244,18 +244,47 @@ section {
   grid-template-columns: 50% 50%;
 }
 
-.image-section-sport {
+.carousel {
   display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 80%; /* Ocupa el 80% del contenedor */
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  position: relative; /* Permite que los botones se posicionen correctamente */
 }
-.image-section-sport img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-  margin: auto;
+
+.carousel img {
+  width: 75%;
+  display: none; /* Oculta todas las imágenes por defecto */
+  border-radius: 20px;
+}
+
+.carousel img.active {
+  display: block; /* Solo muestra la imagen activa */
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 85%;
+  transform: translateY(-50%);
+  width: 40px; /* Ancho del botón aumentado */
+  height: 40px; /* Altura del botón aumentada */
+  background-color: transparent; /* Sin color de fondo */
+  color: var(--main-bg-color); /* Color del texto */
+  border: 2px solid var(--main-bg-color); /* Añade un borde para visibilidad */
+  border-radius: 50%; /* Hace que los botones sean circulares */
+  cursor: pointer;
+  z-index: 2; /* Asegura que los botones estén encima de la imagen */
+  opacity: 1; /* Ambos botones son visibles todo el tiempo */
+}
+
+button.prev {
+  left: 30px;
+}
+
+button.next {
+  right: 30px;
 }
 
 .text-section-sport {
@@ -471,15 +500,16 @@ section {
   max-width: 100%;
   height: 90%;
   display: flex;
-  background: rgb(255, 254, 249);
-  background: linear-gradient(
+  /* background: rgb(255, 254, 249); */
+  /* background: linear-gradient(
     90deg,
     rgba(255, 254, 249, 1) 0%,
     rgba(189, 196, 196, 0.30808820110075286) 100%
-  );
+  ); */
   box-shadow: 4 4px 8px rgba(6, 6, 6, 0.1);
-  margin-right: 40px;
-  margin-top: 30px;
+  margin: 0;
+  /* margin-right: 30px;
+  margin-top: 30px; */
 }
 .impacto-social-container {
   width: 100%;
@@ -489,7 +519,7 @@ section {
 }
 
 .impacto-social-img img {
-  width: 70%;
+  width: 80%;
 }
 .accordion {
   background-color: #f2f2f2;
@@ -867,7 +897,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 24px;
-  color: #4caf50;
+  color: var(--main-bg-color);
 }
 
 .icon a {
@@ -1217,6 +1247,16 @@ section {
   .button-container .btn {
     width: auto; /* En pantallas grandes, los botones ocupan su tamaño normal */
   }
+  button.prev {
+    left: -10px;
+  }
+
+  button.next {
+    right: -10px;
+  }
+  .impacto-social-img img {
+    width: 80%;
+  }
 }
 /* Estilos específicos para pantallas de 844x390 */
 @media screen and (max-width: 844px) and (max-height: 390px) {
@@ -1247,5 +1287,13 @@ section {
 
   .button-container .btn {
     width: auto; /* En pantallas grandes, los botones ocupan su tamaño normal */
+  }
+  .carousel img {
+    width: 120%;
+    display: none; /* Oculta todas las imágenes por defecto */
+  }
+  button.prev,
+  button.next {
+    top: 75%;
   }
 }
